@@ -145,7 +145,7 @@ const showResult = async (req: Request, res: Response, next: NextFunction) => {
 
   if (event) {
     event = event[0];
-    res.json({ id: event._id, name: event.name, suitableDates: event.votes });
+    res.json({ id: event?._id, name: event?.name, suitableDates: event?.votes });
     // res.json(event)
   } else {
     res.status(constants.STATUS_CODES.NOT_FOUND.code).send(constants.STATUS_CODES.NOT_FOUND.message);

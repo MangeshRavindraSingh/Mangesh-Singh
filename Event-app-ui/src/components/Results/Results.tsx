@@ -26,12 +26,25 @@ const Results = ({
     );
     const data = await response.json();
 
-    setResult(data);
+    if(!data.id){
+      setResult({
+        id: "",
+        name: "",
+        suitableDates: [],
+      })
+    } else{
+      setResult(data);
+    }
+
+    
   };
 
   useEffect(() => {
-    handleResult();
-  }, []);
+    if(eventId){
+      handleResult();
+    }
+
+  }, [eventId]);
 
   return (
     <>

@@ -16,7 +16,7 @@ const EventDetailsCard = ({
   return (
     <div className="me-5 ms-5 rounded border border-primary mx-auto mt-5 p-5 bg-light">
 
-      <Results eventId={event._id} setShowResult={setShowResult} showResult={showResult}/>
+      {showResult &&<Results eventId={event._id} setShowResult={setShowResult} showResult={showResult}/>}
 
       <div className="card-body">
         <div className="d-flex justify-content-between">

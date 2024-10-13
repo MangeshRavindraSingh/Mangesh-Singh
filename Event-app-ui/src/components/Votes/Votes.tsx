@@ -3,25 +3,7 @@ import Event from "../../Types/Event";
 
 const Votes = ({ votes }: { votes: Event["votes"] }) => {
   const [max, setMax] = useState(0);
-  // "votes": [
-  //     {
-  //         "date": "2024-11-10",
-  //         "people": [
-  //             "Test user",
-  //             "Test 3",
-  //             "Test user 4"
-  //         ],
-  //         "_id": "670b5b08a57a36f7fd6f62f8"
-  //     },
-  //     {
-  //         "date": "2024-11-05",
-  //         "people": [
-  //             "Test user",
-  //             "Test 2"
-  //         ],
-  //         "_id": "670b5b08a57a36f7fd6f62f9"
-  //     }
-  // ],
+  
   useEffect(() => {
     const totalPeople = votes.reduce(
       (acc, vote) => acc + vote.people.length,
