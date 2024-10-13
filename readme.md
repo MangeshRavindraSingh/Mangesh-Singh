@@ -22,7 +22,6 @@ This is a simplified event scheduling application, built with **Node.js**, **Typ
 - **Node.js** (with **TypeScript**)
 - **Express.js** as the web framework
 - **MongoDB** with **Mongoose** for data persistence
-- **Cors** for cross-origin request handling
 
 ## Setup Instructions
 
@@ -30,10 +29,19 @@ This is a simplified event scheduling application, built with **Node.js**, **Typ
 
 - **Node.js** (v14+)
 - **MongoDB** (local or remote)
-- **npm** (or **yarn**) for package management
+- **npm** for package management
+- **env** need to add .env file with PORT and MONGO_URI
 
-### 1. Clone the Repository
-
+### To start the application
+- **Backend** 
 ```bash
-git clone https://github.com/your-username/event-scheduling-app.git
-cd event-scheduling-app
+cd Event-app-backend
+npx ts-node src/index.ts
+```
+- **Frontend** 
+```bash
+cd Event-app-ui
+npm run dev
+```
+
+
